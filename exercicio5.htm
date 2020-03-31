@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body >   
+        <form method= "Post" onsubmit="return valida()" name="formulario">
+            <input type="text" name="nome" placeholder="digite seu nome aqui">
+            <input type="password" name="senha" placeholder="Digite a senha">
+            <input type="submit" name="enviar" value="Cadastrar">
+        </form>
+        <script>
+            function valida(){
+                var x = document.forms["formulario"]["nome"].value;
+                var y = document.forms["formulario"]["senha"].value;
+
+                if (x == "" || y == ""){
+                    alert ("Existem campos em branco");
+                 }
+                else {
+                    alert("Cadastro efetuado com sucesso");
+                }
+
+            }
+        </script>
+    </body>
+</html>

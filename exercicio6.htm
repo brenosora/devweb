@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="script.js"></script>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    </head>
+    <body >
+        <input type="radio" name="op" value="1">
+        <label >Soma</label><br>
+
+        <input type="radio" name="op" value="2">
+        <label >Subtração</label><br>
+
+        <input type="radio" name="op" value="3">
+        <label >Multiplicação</label><br>
+
+        <input type="radio" name="op" value="4">
+        <label >Divisão</label><br>
+
+        <label>Valor 1</label>
+        <input type="number" id="input1">
+        <br>
+
+        <label>Valor 2</label>
+        <input type="number" id="input2">
+        <br>
+
+        <p style="color: pink;" id="resultado"></p>
+
+        <button onclick="calcula()">Calcular</button>
+
+        <script>
+            function calcula(){
+                var a = document.getElementById('input1').value;
+                var b = document.getElementById('input2').value;
+
+                for (var i = 0; i < document.getElementsByName('op').length; i++)
+                {
+                    if (document.getElementsByName('op')[i].checked)
+                    {
+                        var c = document.getElementsByName('op')[i].value;
+                    }
+                }
+                if (c == 1){
+                    document.getElementById('resultado').innerHTML = parseInt(a) + parseInt (b);
+                }
+                else if (c == 2){
+                    document.getElementById('resultado').innerHTML = parseInt(a) - parseInt (b);
+                }
+                else if (c == 3){
+                    document.getElementById('resultado').innerHTML = parseInt(a) * parseInt (b);
+                }
+                else if (c == 4){
+                    document.getElementById('resultado').innerHTML = parseInt(a) / parseInt (b);
+                }
+            }
+        </script>
+    </body>
+</html>
