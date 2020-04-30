@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js04_Upperlowercase2.htm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+<body>
+<!-- Linha de comentario HTML: Entrada de dados via formulário -->
+    <h3>Formul&aacute;rio de Consulta de Curso</h3>
+    <p>
+    <form name="formcurso" action="" method="post">
+        Digite seu Curso: <input type="text" name="f_cursodig" size="8" maxlength="4" /> (sist)<p></p>
+        <input type="button" name="btn_validar" value="validar" onclick="cadcurso()" />
+        <input type="reset" name="btn_cancelar" value="cancelar" /><p></p>
+        C&oacute;digo do Curso: <input type="text" name="f_codcurso" size="15" maxlength="10" />
+    </form>
+<!-- Linha de comentário HTML: Estrutura JavaScript com o mkétodo touppercase-->
+<script language="Javascript">
+
+/*Definição das variaveis*/
+var js_cursodig;
+
+/*função codcurso()*/
+function cadcurso() {
+    js_cursodig=document.formcurso.f_cursodig.value;
+    if (js_cursodig.toLowerCase() == 'sist'){
+        document.formcurso.f_codcurso.value='sist001/FB';
+    } // fechamento da estrutura if
+    else{
+        window.alert('Curso Inv\u00E1ldio!');
+    }
+}
+</script>
+</body>
+</html>
